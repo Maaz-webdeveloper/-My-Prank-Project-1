@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prank</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #85cea3;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .question {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        #noBtn {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="question">Bhotnika tujhe kira ha😁</div>
+    <div class="buttons">
+        <button class="btn" id="yesBtn">Yes</button>
+        <button class="btn" id="noBtn">No</button>
+    </div>
+</div>
+
+<script>
+    const noBtn = document.getElementById("noBtn");
+    const yesBtn = document.getElementById("yesBtn");
+
+    noBtn.addEventListener("mouseover", function () {
+        const randomX = Math.floor(Math.random() * (window.innerWidth - 100));
+        const randomY = Math.floor(Math.random() * (window.innerHeight - 50));
+        noBtn.style.position = "absolute";
+        noBtn.style.left = randomX + "px";
+        noBtn.style.top = randomY + "px";
+    });
+
+    yesBtn.addEventListener("click", function () {
+        alert("Thanks for accepting Saad Abasi 😁");
+    });
+</script>
+
+</body>
+</html>
